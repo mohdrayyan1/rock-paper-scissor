@@ -1,5 +1,13 @@
+
 for(var i=0;i<document.querySelectorAll(".pic").length;i++)
 {
+	if(screen.width<500){
+		document.querySelector(".compText").innerHTML="Comp Selection";
+		
+	}
+	else{
+		document.querySelector(".compText").innerHTML="Computer Selection";
+	}
 	document.querySelectorAll(".pic")[i].addEventListener("click",function(){
 		var userObject=this.innerText;
 		userSide(userObject);
@@ -75,7 +83,7 @@ for(var i=0;i<document.querySelectorAll(".pic").length;i++)
 			location.reload();
 		}
 		else if(score2===10){
-			alert("Unfortunately you lost the game.");
+			alert("Unfortunately you lost the game.Better luck next time.");
 			location.reload();
 		}
 		
